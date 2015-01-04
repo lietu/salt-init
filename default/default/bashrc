@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Load up virtualenvwrapper
+virtualenvwrapper="$(which virtualenvwrapper.sh)"
+if [[ ! -z "$virtualenvwrapper" ]]; then
+	source "$virtualenvwrapper"
+fi
