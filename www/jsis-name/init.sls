@@ -36,5 +36,8 @@ jsis-name-jekyll-build:
         - name: jekyll
         - cwd: /www/sites/jsis-name
         - user: lietu
+        - env:
+            - LC_ALL: 'en_US.UTF-8'
+            - LANG: 'en_US.UTF-8'
         - require:
             - git: https://github.com/lietu/jsis.name

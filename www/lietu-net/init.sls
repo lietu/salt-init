@@ -37,5 +37,8 @@ lietu-net-jekyll-build:
         - name: jekyll
         - cwd: /www/sites/lietu-net
         - user: lietu
+        - env:
+            - LC_ALL: 'en_US.UTF-8'
+            - LANG: 'en_US.UTF-8'
         - require:
             - git: https://github.com/lietu/lietunet

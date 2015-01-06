@@ -10,3 +10,6 @@ virtualenvwrapper="$(which virtualenvwrapper.sh)"
 if [[ ! -z "$virtualenvwrapper" ]]; then
 	source "$virtualenvwrapper"
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
