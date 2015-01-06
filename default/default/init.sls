@@ -45,6 +45,7 @@ lietu:
 
 # Bunch of useful tools people want on the machines
 {% for pkg in 'gcc', 'vim-enhanced', 'nano', 'lsof', 'wget', 'curl', 'strace', 'httpd-tools', 'bzip2', 'policycoreutils-python' %}
-{{ pkg }}:
-    pkg.installed
+{{ pkg }}-default:
+    pkg.installed:
+        - name: {{ pkg }}
 {% endfor %}
