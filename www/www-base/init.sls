@@ -33,6 +33,12 @@ nginx:
         - makedirs: True
 {% endfor %}
 
+/www/sites/link_custom.sh:
+    file.managed:
+        - source: salt://www-base/link_custom.sh
+        - require:
+            - file: /www/sites
+
 {% for path in '/etc/nginx/conf.d/', '/etc/nginx/sites-enabled/default' %}
 {{ path }}:
     file.absent

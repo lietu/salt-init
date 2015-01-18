@@ -3,7 +3,7 @@
     pkg.installed
 {% endfor %}
 
-{% for npm in 'less', %}
+{% for npm in 'less@1.3.3', %}
 {{ npm }}:
     npm.installed
 {% endfor %}

@@ -1,0 +1,3 @@
+
+# Ensure that wheel group has sudo perms
+%wheel  ALL=(ALL)       ALL

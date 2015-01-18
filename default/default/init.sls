@@ -7,6 +7,7 @@ lietu:
         - home: /home/lietu
         - groups:
             - lietu
+            - wheel
 
 /home/lietu/:
     file.directory:
@@ -49,3 +50,7 @@ lietu:
     pkg.installed:
         - name: {{ pkg }}
 {% endfor %}
+
+/etc/sudoers:
+    file.append:
+        - source: salt://default/sudoers
